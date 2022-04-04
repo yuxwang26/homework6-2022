@@ -41,21 +41,20 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("The current time is " + video.currentTime)
 });
 
+// document.querySelector("#mute").addEventListener("click", function() {
+// 	if(video.muted == true){
+// 		video.muted = false
+// 		this.innerHTML = "Mute"
+// 	}
+// 	else {
+// 		video.muted = true
+// 		this.innerHTML = "Unmute"
+// 	}
+// 	console.log("The value of mute is " + video.muted)
+// });
 
-document.querySelector("#mute").addEventListener("click", function() {
-	if(video.muted == true){
-		video.muted = false
-		this.innerHTML = "Mute"
-	}
-	else {
-		video.muted = true
-		this.innerHTML = "Unmute"
-	}
-	console.log("The value of mute is " + video.muted)
-});
-
-document.querySelector("#slider").addEventListener("click", function() {
-	video.volume = document.querySelector("#slider").value/100
-	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
-	console.log(this.value)
-});
+// document.querySelector("#slider").addEventListener("click", function() {
+// 	video.volume = document.querySelector("#slider").value/100
+// 	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
+// 	console.log(this.value)
+// });
