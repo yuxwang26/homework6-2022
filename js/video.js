@@ -64,8 +64,3 @@ document.querySelector("#vintage").addEventListener("click", function() {
 	document.querySelector("video").classList.add("oldSchool");
 	console.log("Old School class added")
 });
-
-document.querySelector("#orig").addEventListener("click", function() {
-	document.querySelector("video").classList.remove("oldSchool");
-	console.log("Original class, old school class removed")
-});
