@@ -30,16 +30,16 @@ document.querySelector("#faster").addEventListener("click", function() {
 	console.log("New speed is " + video.playbackRate);
 });
 
-document.querySelector("#skip").addEventListener("click", function() {
-	//console.log(video.duration)
-	if(video.currentTime + 15 > video.duration){
-		video.currentTime = 0
-	}
-	else {
-		video.currentTime += 15
-	}
-	console.log("The current time is " + video.currentTime)
-});
+// document.querySelector("#skip").addEventListener("click", function() {
+// 	//console.log(video.duration)
+// 	if(video.currentTime + 15 > video.duration){
+// 		video.currentTime = 0
+// 	}
+// 	else {
+// 		video.currentTime += 15
+// 	}
+// 	console.log("The current time is " + video.currentTime)
+// });
 
 // document.querySelector("#mute").addEventListener("click", function() {
 // 	if(video.muted == true){
