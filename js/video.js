@@ -59,8 +59,3 @@ document.querySelector("#slider").addEventListener("click", function() {
 	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
 	console.log(this.value)
 });
-
-document.querySelector("#vintage").addEventListener("click", function() {
-	document.querySelector("video").classList.add("oldSchool");
-	console.log("Old School class added")
-});
