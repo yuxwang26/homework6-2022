@@ -30,14 +30,15 @@ document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Current speed is " + video.playbackRate);
 });
 
-document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Skip Ahead")
-	video.currentTime += 15
-	if(video.currentTime >= video.duration){
-		video.currentTime = 0
+document.querySelector("#skip").addEventListener("click", function () {
+	console.log("Skip Ahead In Video");
+	if (video.currentTime + 15 > video.duration) {
+		video.currentTime = 0;
+	} else {
+		video.currentTime += 15;
 	}
-	console.log("Current time is " + video.currentTime)
-});
+	console.log("Current time is " + video.currentTime);
+  });
 
 document.querySelector("#mute").addEventListener("click", function() {
 	if(video.muted == true){
