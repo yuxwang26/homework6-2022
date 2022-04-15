@@ -27,34 +27,43 @@ document.querySelector("#slower").addEventListener("click", function() {
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Current speed is " + video.playbackRate);
 	video.playbackRate /= 0.95
-	console.log("New speed is " + video.playbackRate);
+	console.log("Current speed is " + video.playbackRate);
 });
 
-// document.querySelector("#skip").addEventListener("click", function() {
-// 	//console.log(video.duration)
-// 	if(video.currentTime + 15 > video.duration){
-// 		video.currentTime = 0
-// 	}
-// 	else {
-// 		video.currentTime += 15
-// 	}
-// 	console.log("The current time is " + video.currentTime)
-// });
+document.querySelector("#skip").addEventListener("click", function() {
+	console.log("Skip Ahead")
+	video.currentTime + 15
+	if(video.currentTime > video.duration){
+		video.currentTime = 0
+	}
+	console.log("Current time is " + video.currentTime)
+});
 
-// document.querySelector("#mute").addEventListener("click", function() {
-// 	if(video.muted == true){
-// 		video.muted = false
-// 		this.innerHTML = "Mute"
-// 	}
-// 	else {
-// 		video.muted = true
-// 		this.innerHTML = "Unmute"
-// 	}
-// 	console.log("The value of mute is " + video.muted)
-// });
+document.querySelector("#mute").addEventListener("click", function() {
+	if(video.muted == true){
+		console.log("Unmute")
+		video.muted = false
+		document.querySelector("#mute").innerHTML = "Mute"
+	}
+	else {
+		console.log('Mute"')
+		video.muted = true
+		document.querySelector("#mute").innerHTML = "Unmute"
+	}
+});
 
-// document.querySelector("#slider").addEventListener("click", function() {
-// 	video.volume = document.querySelector("#slider").value/100
-// 	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
-// 	console.log(this.value)
-// });
+document.querySelector("#slider").addEventListener("click", function() {
+	console.log("Change Volume")
+	video.volume = this.value / 100
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
+})
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	console.log("Old School")
+	video.classList.add("oldSchool")
+})
+
+document.querySelector("#orig").addEventListener("click", function() {
+	console.log("Original")
+	video.classList.remove("oldSchool")
+})
